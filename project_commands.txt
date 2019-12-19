@@ -1,0 +1,24 @@
+
+# project - by default - DB & Server - 
+# defult DB - SQLite3 
+# deafult server - django server 
+
+django-admin startproject IMS
+python manage.py runserver (7000)
+
+python manage.py startapp incidents # creation 
+python manage.py startapp baseapp
+
+python manage.py makemigrations  # create queries based on model 
+python manage.py migrate  # create or update table in DB using queries (migrations)
+
+
+python manage.py dbshell 
+
+python manage.py createsuperuser 
+        - username 
+         - email 
+        - password 
+        - Reneter password 
+
+

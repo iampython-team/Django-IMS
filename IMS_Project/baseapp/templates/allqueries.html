@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    {% block content %}
+       <br><br>
+       <div class="container">
+          <h2> All Incident Model Queries </h2>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Query</th>
+                <th scope="col">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Max Incident Number</td>
+                <td>{{ max_incident_number.values }}</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Sum of Incident Number</td>
+                <td>{{ sum_incident_number.values }}</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Second Largest Incident Row </td>
+                <td>{{ second_largest_row }}</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td> Get Incident Data (FK) </td>
+                <td>{{ get_incident }}</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td> Get Distinct Incidents </td>
+                
+                <td>
+                    {% for i in get_distinct_Incident %}
+                    {{ i}},
+                    {% endfor %}
+                 </td>
+              
+              </tr>
+            </tbody>
+          </table>
+ 
+
+
+
+        </div>
+        {% endblock %}
+  </body>
+</html>

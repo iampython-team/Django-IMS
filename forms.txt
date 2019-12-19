@@ -1,0 +1,9 @@
+
+<form method='GET/POST' action='/url/'> 
+
+Username : <input type='textfield' name='uname' />
+Password : <input type='password' name='pwd'/>
+
+<input type='submit' name='login' />
+
+</form>

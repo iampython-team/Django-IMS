@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title> Person form details</title>
+  </head>
+  <body>
+    {% block content %}
+    <div class="container">
+        <h1> Contact </h1>
+        <br> <br>
+        <form method="POST">
+            {% csrf_token %}
+             {{ cform.as_p }}
+             <input type="submit" name="submit" value="submit"/>
+             <input type="reset" name="reset" value="clear"/>
+
+        </form>
+        </div>
+  
+    {% endblock %}
+  </body>
+</html>

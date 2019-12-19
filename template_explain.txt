@@ -1,0 +1,50 @@
+
+webapp/ Enterpr / intranet 
+------------------------------
+
+header - nav bar - menu [ Home about  products services  contact investors]
+
+body ------------------------> 
+
+footer 
+
+
+
+
+------------------------------------------------
+
+base.html 
+ --- header 
+ --- footer 
+
+
+home.html - {% extends 'base.html' %}
+aboutuse.html - {% extends 'base.html' %}
+contact.html - {% extends 'base.html' %}
+
+
+
+
+------------------
+Django template language 
+
+
+<html>
+<head>
+   <title> </title>
+
+</head>
+
+<body>
+
+{% %} - functionality 
+
+{{ }} - accessing variables
+
+name : {{ person.name }}
+
+</body>
+
+
+
+<html>
